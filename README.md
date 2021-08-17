@@ -1,4 +1,4 @@
-![Docker Pulls](https://img.shields.io/docker/pulls/miningcontainers/xmrig)
+[![Docker Pulls](https://img.shields.io/docker/pulls/miningcontainers/xmrig)](https://hub.docker.com/r/miningcontainers/xmrig)
 
 # XMRig
 
