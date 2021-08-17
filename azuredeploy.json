@@ -39,9 +39,12 @@
                                 "-k",
                                 "--tls",
                                 "--no-color",
-                                "[concat('-o ', parameters('mining_pool_address'))]",
-                                "[concat('-u ', parameters('mining_pool_user'))]",
-                                "[concat('-p ', parameters('mining_pool_password'))]"
+                                "-o",
+                                "[parameters('mining_pool_address')]",
+                                "-u",
+                                "[parameters('mining_pool_user')]",
+                                "-p",
+                                "[parameters('mining_pool_password')]"
                             ],
                             "ports": [],
                             "environmentVariables": [],
