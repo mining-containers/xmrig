@@ -2,7 +2,7 @@
 
 # XMRig
 
-This XMRig image is kept up to date with the latest updates and is custom built in an Alpine container for best performance and size.
+This [XMRig](https://hub.docker.com/r/miningcontainers/xmrig) image is kept up to date with the latest updates and is custom built in an Alpine container for best performance and size.
 
 This image will CPU mine very well on any Docker host including Azure and AWS.
 
