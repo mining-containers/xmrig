@@ -7,7 +7,7 @@ This [XMRig](https://hub.docker.com/r/miningcontainers/xmrig) image is kept up t
 
 This image will CPU mine very well on any Docker host including Azure and AWS.
 
-If you are new to Monero mining and need a wallet/address check out https://www.getmonero.org/downloads/
+If you are new to Monero mining and need a wallet/address see the [official wallet client](https://www.getmonero.org/downloads/).
 
 ## Getting Started
 
