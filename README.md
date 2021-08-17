@@ -1,5 +1,6 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/miningcontainers/xmrig)](https://hub.docker.com/r/miningcontainers/xmrig)
 
+
 # XMRig
 
 This [XMRig](https://hub.docker.com/r/miningcontainers/xmrig) image is kept up to date with the latest updates and is custom built in an Alpine container for best performance and size.
@@ -27,9 +28,13 @@ Here is another example for [Nanopool](https://xmr.nanopool.org/) (nanopool diff
 docker run miningcontainers/xmrig:latest --tls -o xmr-us-east1.nanopool.org:14433 -u 48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD --coin monero
 ```
 
-### Running in Azure ACI
+## Running in Azure ACI
 
-You can run in Azure Container Instances quite easily by using the native support in Docker Desktop for Windows/Mac.
+You can deploy directly to Azure Container Instances using our ARM template with the following button:
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmining-containers%2Fxmrig%2Fmain%2Fazuredeploy.json)
+
+Or you can run manually using the native support in Docker Desktop for Windows/Mac.
 
 You simply log Docker into Azure, create a context, and include the context on your normal `run` command.
 
@@ -42,7 +47,7 @@ docker --context myacicontext run miningcontainers/xmrig:latest -k --tls -o POOL
 ```
 Learn more at https://docs.docker.com/cloud/aci-integration/.
 
-### Running in AWS ECS
+## Running in AWS ECS
 
 Running in ECS is similar to running in ACI.  You can follow the instructions at: https://docs.docker.com/cloud/ecs-integration/
 
