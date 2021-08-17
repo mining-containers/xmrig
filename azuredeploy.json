@@ -1,0 +1,61 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "aci_name": {
+            "defaultValue": "monero_aci",
+            "type": "string"
+        },
+        "mining_pool_address": {
+            "defaultValue": "pool.supportxmr.com:443",
+            "type": "string",
+            "description": "The hostname and port of the mining pool."
+        },
+        "mining_pool_user": {
+            "defaultValue": "48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD",
+            "type": "string",
+            "description": "The username parameter for the pool.  Many pools expect your Monero wallet address in this field."
+        },
+        "mining_pool_password": {
+            "defaultValue": "aci_worker",
+            "type": "string",
+            "description": "The password parameter for the pool.  This may be optional, or used as a miner display name (e.g. for SupportXMR)."
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2018-10-01",
+            "name": "[parameters('aci_name')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "containers": [
+                    {
+                        "name": "[parameters('aci_name')]",
+                        "properties": {
+                            "image": "miningcontainers/xmrig:latest",
+                            "command": [
+                                "./xmrig",
+                                "-k",
+                                "--tls",
+                                "[concat(' -o', parameters('mining_pool_address'))]",
+                                "[concat(' -u', parameters('mining_pool_user'))]",
+                                "[concat(' -p', parameters('mining_pool_password'))]"
+                            ],
+                            "ports": [],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 4,
+                                    "cpu": 4
+                                }
+                            }
+                        }
+                    }
+                ],
+                "restartPolicy": "Always",
+                "osType": "Linux"
+            }
+        }
+    ]
+}
