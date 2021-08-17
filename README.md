@@ -30,7 +30,7 @@ docker run miningcontainers/xmrig:latest --tls -o xmr-us-east1.nanopool.org:1443
 
 ## Running in Azure ACI
 
-You can deploy directly to Azure Container Instances using our ARM template with the following button:
+You can deploy directly to Azure Container Instances using our ARM template with the following button.  This will be a single container, so you may want to modify the template to duplicate the container instances a few times.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmining-containers%2Fxmrig%2Fmain%2Fazuredeploy.json)
 
