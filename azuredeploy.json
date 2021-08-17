@@ -38,9 +38,9 @@
                                 "./xmrig",
                                 "-k",
                                 "--tls",
-                                "[concat(' -o', parameters('mining_pool_address'))]",
-                                "[concat(' -u', parameters('mining_pool_user'))]",
-                                "[concat(' -p', parameters('mining_pool_password'))]"
+                                "[concat('-o ', parameters('mining_pool_address'))]",
+                                "[concat('-u ', parameters('mining_pool_user'))]",
+                                "[concat('-p ', parameters('mining_pool_password'))]"
                             ],
                             "ports": [],
                             "environmentVariables": [],
