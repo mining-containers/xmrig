@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "aci_name": {
-            "defaultValue": "monero_aci",
+            "defaultValue": "monero-aci",
             "type": "string"
         },
         "mining_pool_address": {
