@@ -53,3 +53,13 @@ Learn more at https://docs.docker.com/cloud/aci-integration/.
 
 Running in ECS is similar to running in ACI.  You can follow the instructions at: https://docs.docker.com/cloud/ecs-integration/
 
+
+## Improve performance on Linux hosts
+
+By disabling prefetching you can see up to 30% performance gain.  Usually XMRIG would do this automatically but it is not possible from inside the docker image.
+
+You can run this command on the Linux host to use the XMRIG script to configure MSR (until next reboot):
+
+```shell
+wget https://raw.githubusercontent.com/xmrig/xmrig/dev/scripts/randomx_boost.sh -v -O randomx_boost.sh; ./randomx_boost.sh; rm -rf randomx_boost.sh
+```
