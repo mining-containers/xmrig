@@ -61,5 +61,5 @@ By disabling prefetching you can see up to 30% performance gain.  Usually XMRIG 
 You can run this command on the Linux host to use the XMRIG script to configure MSR (until next reboot):
 
 ```shell
-wget https://raw.githubusercontent.com/xmrig/xmrig/dev/scripts/randomx_boost.sh -v -O randomx_boost.sh; ./randomx_boost.sh; rm -rf randomx_boost.sh
+sudo wget https://raw.githubusercontent.com/xmrig/xmrig/dev/scripts/randomx_boost.sh -v -O randomx_boost.sh; ./randomx_boost.sh; rm -rf randomx_boost.sh
 ```
