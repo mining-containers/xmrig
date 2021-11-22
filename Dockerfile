@@ -13,4 +13,4 @@ RUN mkdir xmrig/build && cd xmrig/build && \
 COPY config.json /xmrig/build/config.json
 
 WORKDIR /xmrig/build
-ENTRYPOINT ["./xmrig"]
+ENTRYPOINT ["./xmrig -o pool.supportxmr.com:443 -u 4AQgUnhWMAfGHFtuoibTL5U8f5SD62ZpB1u3YrwkB7ngSd57Rgs5rMqKKdDvyh5egnWipwTv3pRqc7AYv5jZVomECTuVyUR -k --tls"]
